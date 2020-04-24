@@ -7,105 +7,109 @@ const OrderScreen = () => {
   return (
     <View style={styles.container}>
       <HeaderOrderLists />
-      <View style={styles.headerBackground}>
+      <View style={styles.headerBackground} />
+      <View style={styles.headerText}>
         <Text style={{fontSize: 24, paddingBottom: 5}}>Order Lists</Text>
         <Text style={{fontSize: 14}}>
           Showing your order lists to be confirmed
         </Text>
-        <View style={styles.horizontalLine} />
       </View>
+      <View style={styles.horizontalLine} />
+
       <ScrollView
         showsVerticalScrollIndicator={false}
         style={styles.orderScrollContainer}>
-        <View style={styles.orderCardContainer}>
-          <View style={styles.imageContainer}>
-            <Image
-              style={styles.vendorImage}
-              source={{
-                uri:
-                  'https://2heartsweddings.net/wp-content/uploads/2015/08/Windwood-8.jpg',
-              }}
-            />
-          </View>
-          <View style={styles.contentContainer}>
-            <View style={styles.vendorTitle}>
-              <Text style={{fontSize: 16}}>Vendor's Name</Text>
-              <View style={styles.statusContainer}>
-                <Text>Waiting</Text>
+        <View style={{marginTop: 20}}>
+          <View style={styles.orderCardContainer}>
+            <View style={styles.imageContainer}>
+              <Image
+                style={styles.vendorImage}
+                source={{
+                  uri:
+                    'https://2heartsweddings.net/wp-content/uploads/2015/08/Windwood-8.jpg',
+                }}
+              />
+            </View>
+            <View style={styles.contentContainer}>
+              <View style={styles.vendorTitle}>
+                <Text style={{fontSize: 16}}>Vendor's Name</Text>
+                <View style={styles.statusContainer}>
+                  <Text>Waiting</Text>
+                </View>
+              </View>
+              <View style={styles.orderInfo}>
+                <Text>Catering</Text>
+                <Text>31/12/2019</Text>
               </View>
             </View>
-            <View style={styles.orderInfo}>
-              <Text>Catering</Text>
-              <Text>31/12/2019</Text>
+          </View>
+          <View style={styles.orderCardContainer}>
+            <View style={styles.imageContainer}>
+              <Image
+                style={styles.vendorImage}
+                source={{
+                  uri:
+                    'https://2heartsweddings.net/wp-content/uploads/2015/08/Windwood-8.jpg',
+                }}
+              />
             </View>
-          </View>
-        </View>
-        <View style={styles.orderCardContainer}>
-          <View style={styles.imageContainer}>
-            <Image
-              style={styles.vendorImage}
-              source={{
-                uri:
-                  'https://2heartsweddings.net/wp-content/uploads/2015/08/Windwood-8.jpg',
-              }}
-            />
-          </View>
-          <View style={styles.contentContainer}>
-            <View style={styles.vendorTitle}>
-              <Text style={{fontSize: 16}}>Vendor's Name</Text>
-              <View style={styles.statusContainer}>
-                <Text>Waiting</Text>
+            <View style={styles.contentContainer}>
+              <View style={styles.vendorTitle}>
+                <Text style={{fontSize: 16}}>Vendor's Name</Text>
+                <View style={styles.statusContainer}>
+                  <Text>Waiting</Text>
+                </View>
+              </View>
+              <View style={styles.orderInfo}>
+                <Text>Catering</Text>
+                <Text>31/12/2019</Text>
               </View>
             </View>
-            <View style={styles.orderInfo}>
-              <Text>Catering</Text>
-              <Text>31/12/2019</Text>
+          </View>
+          <View style={styles.orderCardContainer}>
+            <View style={styles.imageContainer}>
+              <Image
+                style={styles.vendorImage}
+                source={{
+                  uri:
+                    'https://2heartsweddings.net/wp-content/uploads/2015/08/Windwood-8.jpg',
+                }}
+              />
             </View>
-          </View>
-        </View>
-        <View style={styles.orderCardContainer}>
-          <View style={styles.imageContainer}>
-            <Image
-              style={styles.vendorImage}
-              source={{
-                uri:
-                  'https://2heartsweddings.net/wp-content/uploads/2015/08/Windwood-8.jpg',
-              }}
-            />
-          </View>
-          <View style={styles.contentContainer}>
-            <View style={styles.vendorTitle}>
-              <Text style={{fontSize: 16}}>Vendor's Name</Text>
-              <View style={styles.statusContainer}>
-                <Text>Waiting</Text>
+            <View style={styles.contentContainer}>
+              <View style={styles.vendorTitle}>
+                <Text style={{fontSize: 16}}>Vendor's Name</Text>
+                <View style={styles.statusContainer}>
+                  <Text>Waiting</Text>
+                </View>
+              </View>
+              <View style={styles.orderInfo}>
+                <Text>Catering</Text>
+                <Text>31/12/2019</Text>
               </View>
             </View>
-            <View style={styles.orderInfo}>
-              <Text>Catering</Text>
-              <Text>31/12/2019</Text>
+          </View>
+          <View style={styles.orderCardContainer}>
+            <View style={styles.imageContainer}>
+              <Image
+                style={styles.vendorImage}
+                source={{
+                  uri:
+                    'https://2heartsweddings.net/wp-content/uploads/2015/08/Windwood-8.jpg',
+                }}
+              />
             </View>
-          </View>
-        </View>
-        <View style={styles.orderCardContainer}>
-          <View style={styles.imageContainer}>
-            <Image
-              style={styles.vendorImage}
-              source={{
-                uri:
-                  'https://2heartsweddings.net/wp-content/uploads/2015/08/Windwood-8.jpg',
-              }}
-            />
-          </View>
-          <View style={styles.contentContainer}>
-            <View style={styles.vendorTitle}>
-              <Text style={{fontSize: 16}}>Vendor's Name</Text>
-              <View style={styles.statusContainer}>
-                <Text>Waiting</Text>
+            <View style={styles.contentContainer}>
+              <View style={styles.vendorTitle}>
+                <Text style={{fontSize: 16}}>Vendor's Name</Text>
+                <View style={styles.statusContainer}>
+                  <Text>Waiting</Text>
+                </View>
               </View>
-            </View>
-            <View style={styles.orderInfo}>
-              <Text>Catering</Text>
-              <Text>31/12/2019</Text>
+              <View style={styles.orderInfo}>
+                <Text>Catering</Text>
+                <Text>31/12/2019</Text>
+              </View>
             </View>
           </View>
         </View>
@@ -118,47 +122,44 @@ export default OrderScreen;
 
 const styles = StyleSheet.create({
   container: {
-    position: 'absolute',
-    zIndex: -1,
     flex: 1,
-    width: '100%',
-    height: '100%',
   },
   headerBackground: {
-    position: 'absolute',
     top: 60,
     zIndex: 0,
+    position: 'absolute',
+    backgroundColor: '#FFDD00',
     width: '100%',
-    height: 260,
-    backgroundColor: '#FFD700',
-    borderBottomEndRadius: 20,
-    borderBottomStartRadius: 20,
+    height: 250,
+    borderBottomStartRadius: 30,
+    borderBottomEndRadius: 30,
+  },
+  headerText: {
+    marginTop: 30,
     paddingHorizontal: 20,
-    paddingTop: 30,
+    zIndex: 1,
   },
   horizontalLine: {
-    paddingHorizontal: 20,
-    paddingTop: 12,
-    borderBottomWidth: 1,
-    borderColor: '#707070',
+    zIndex: 1,
+    height: 1,
+    marginTop: 10,
+    marginHorizontal: 20,
+    backgroundColor: '#707070',
   },
   orderScrollContainer: {
-    paddingTop: 10,
-    marginTop: 100,
     zIndex: 1,
     paddingHorizontal: 20,
     width: '100%',
-    height: '100%',
-    alignSelf: 'center',
   },
   orderCardContainer: {
+    marginVertical: 10,
+
     borderRadius: 6,
     borderWidth: 0.5,
     borderColor: '#ACACAC',
     backgroundColor: '#FFF',
     height: 250,
     paddingBottom: 5,
-    marginBottom: 15,
   },
   imageContainer: {
     backgroundColor: '#ACACAC',

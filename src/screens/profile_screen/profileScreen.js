@@ -10,10 +10,17 @@ import {
 import Icon from 'react-native-vector-icons/FontAwesome5';
 
 import HeaderProfile from '../../components/Header/HeaderProfile';
-const ProfileScreen = () => {
+const ProfileScreen = props => {
   return (
     <View style={styles.container}>
-      <HeaderProfile />
+      <HeaderProfile
+        settingNav={() => {
+          props.navigation.navigate('MainSetting');
+        }}
+        backIcon={() => {
+          props.navigation.goBack(null);
+        }}
+      />
       <ScrollView showsVerticalScrollIndicator={false}>
         <View style={styles.headerContainer}>
           <ImageBackground

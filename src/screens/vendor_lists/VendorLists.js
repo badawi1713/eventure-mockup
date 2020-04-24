@@ -10,7 +10,7 @@ import {
 
 import HeaderVendorLists from '../../components/Header/HeaderVendorLists';
 
-const VendorLists = () => {
+const VendorLists = props => {
   return (
     <ScrollView
       showsVerticalScrollIndicator={false}
@@ -23,6 +23,9 @@ const VendorLists = () => {
       </View>
       <View style={styles.vendorListContainer}>
         <TouchableOpacity
+          onPress={() => {
+            props.navigation.navigate('VendorByCategory');
+          }}
           activeOpacity={0.8}
           style={styles.vendorItemContainer}>
           <View style={styles.imageContainer}>

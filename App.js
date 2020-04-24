@@ -5,19 +5,39 @@ import {createBottomTabNavigator} from 'react-navigation-tabs';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 
 import SplashScreen from './src/screens/splash_screen/SplashScreen';
+
 import LoginScreen from './src/screens/auth_screen/Login';
 import RegisterScreen from './src/screens/auth_screen/Register';
+
 import HomeScreen from './src/screens/home_screen/HomeScreen';
 import VendorListsScreen from './src/screens/vendor_lists/VendorLists';
 import OrderListsScreen from './src/screens/order_screen/OrderScreen';
 import CartScreen from './src/screens/cart_screen/CartScreen';
-import ProfileScreen from './src/screens/profile_screen/profileScreen';
+import ProfileScreen from './src/screens/profile_screen/ProfileScreen';
+
+import VendorByCategoryScreen from './src/screens/vendorCategory_screen/vendorCategoryScreen';
+
+import SettingScreen from './src/screens/setting_screen/SettingScreen';
 
 const AuthStack = createStackNavigator(
   {
     Login: LoginScreen,
     Register: RegisterScreen,
   },
+  {
+    headerMode: 'none',
+  },
+);
+
+const SettingStack = createStackNavigator(
+  {MainSetting: SettingScreen},
+  {
+    headerMode: 'none',
+  },
+);
+
+const VendorStack = createStackNavigator(
+  {VendorByCategory: VendorByCategoryScreen},
   {
     headerMode: 'none',
   },
@@ -90,9 +110,11 @@ export default createAppContainer(
       Splash: SplashScreen,
       App: AppStack,
       Auth: AuthStack,
+      Setting: SettingStack,
+      VendorByCategory: VendorStack,
     },
     {
-      initialRouteName: 'Splash',
+      initialRouteName: 'App',
     },
   ),
 );

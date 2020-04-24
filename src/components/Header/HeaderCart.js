@@ -1,18 +1,22 @@
 import React from 'react';
-import {View, TextInput, StyleSheet} from 'react-native';
+import {View, TouchableOpacity, StyleSheet} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 
-const HeaderCart = () => {
+const HeaderCart = props => {
   return (
     <View style={styles.headerContainer}>
       <View style={styles.iconContainer}>
-        <Icon style={styles.icon} color="#7E7E7E" name="history" size={20} />
-        <Icon
-          style={styles.icon}
-          color="#7E7E7E"
-          name="sort-amount-down"
-          size={20}
-        />
+        <TouchableOpacity>
+          <Icon style={styles.icon} color="#7E7E7E" name="history" size={20} />
+        </TouchableOpacity>
+        <TouchableOpacity onPress={props.setModalVisible}>
+          <Icon
+            style={styles.icon}
+            color="#7E7E7E"
+            name="sort-amount-down"
+            size={20}
+          />
+        </TouchableOpacity>
       </View>
     </View>
   );

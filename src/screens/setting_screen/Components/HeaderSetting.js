@@ -1,21 +1,27 @@
 import React from 'react';
-import {View, StyleSheet, TouchableOpacity} from 'react-native';
+import {View, Text, StyleSheet} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome5';
+import {TouchableOpacity} from 'react-native-gesture-handler';
 
-const HeaderProfile = props => {
+const HeaderSettings = props => {
   return (
     <View style={styles.headerContainer}>
       <View style={styles.iconContainer}>
-        <Icon style={styles.icon} color="#7E7E7E" name="bell" size={20} />
-        <TouchableOpacity onPress={props.settingNav}>
-          <Icon style={styles.icon} color="#7E7E7E" name="cog" size={20} />
+        <TouchableOpacity onPress={props.backButton}>
+          <Icon
+            style={styles.icon}
+            color="#7E7E7E"
+            name="arrow-left"
+            size={20}
+          />
         </TouchableOpacity>
+        <Text style={{fontSize: 22, color: '#7E7E7E'}}>Settings</Text>
       </View>
     </View>
   );
 };
 
-export default HeaderProfile;
+export default HeaderSettings;
 
 const styles = StyleSheet.create({
   headerContainer: {
@@ -28,9 +34,9 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignContent: 'center',
     alignItems: 'center',
-    justifyContent: 'flex-end',
+    justifyContent: 'flex-start',
   },
   icon: {
-    marginLeft: 20,
+    marginRight: 20,
   },
 });
